@@ -4,14 +4,13 @@
       <h1 id="question-title">{{ getQuestionText }}</h1>
     </div>
     <div class="box">
-      <progress-bar :number="questionId" />
+      <progress-bar :number="questionId"/>
     </div>
     <div class="quiz-image">
       <img src="https://quizterra.com/files/storage/2020/11/25/utvRbYh8LNBOuL69K4EkT8CENlMmaCkM.gif">
     </div>
   </div>
-  <answer-block :question-id="getQuestionId" :answers="getAnswers" :localize="localize"/>
-
+  <answer-block :question-id="getQuestionId" :answers="getAnswers" :localize="localize" :choose-answer="chooseAnswer"/>
 </template>
 
 <script>
@@ -23,18 +22,21 @@ export default {
   components: {AnswerBlock, ProgressBar},
   props: {
     questionId: Number,
-    data: Object,
-    localize: Function
+    questions: Object,
+    localize: Function,
+    chooseAnswer: Function,
+    prevQuestion: Function,
+    score: Number
   },
   computed: {
     getQuestionId() {
       return `q${this.questionId + 1}`
     },
     getQuestionText() {
-      return this.localize(this.data.questions[this.questionId].text)
+      return this.localize(this.questions.questions[this.questionId].text)
     },
     getAnswers() {
-      return this.data.questions[this.questionId].answers;
+      return this.questions.questions[this.questionId].answers;
     }
   }
 }

@@ -5,7 +5,7 @@
                       :question-id="questionId"
                       :answer-id="answer.text"
                       :selected-answer-id="selectedAnswerId"
-                      :on-select="chooseAnswer"
+                      :on-select="selectAnswer"
                       :text="localize(answer.text)" />
     </div>
   </div>
@@ -25,15 +25,16 @@ export default {
   props: {
     questionId: String,
     answers: Object,
-    localize: Function
+    localize: Function,
+    chooseAnswer: Function
   },
   methods: {
-    chooseAnswer(answerId) {
+    selectAnswer(answerId) {
       this.selectedAnswerId = answerId
 
       setTimeout(() => {
-
-      }, 300);
+        this.chooseAnswer(answerId)
+      }, 30);
     }
   }
 }

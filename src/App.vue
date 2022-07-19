@@ -1,5 +1,10 @@
 <template>
-  <question-block :question-id="currentQuestionIndex" :data="questions" :localize="localize"/>
+  <question-block :question-id="currentQuestionIndex"
+                  :questions="questions"
+                  :score="score"
+                  :choose-answer="chooseAnswer"
+                  :prev-question="prevQuestion"
+                  :localize="localize"/>
 </template>
 
 <script>
@@ -12,6 +17,7 @@ export default {
   data() {
     return {
       currentQuestionIndex: 0,
+      score: 0,
       questions: questions,
       localization: localization,
       currentLang: "ru"
@@ -24,8 +30,9 @@ export default {
     localize(id) {
       return this.localization[id][this.currentLang];
     },
-    nextQuestion() {
+    chooseAnswer(answerId) {
       this.currentQuestionIndex++
+      console.log(answerId)
     },
     prevQuestion() {
       this.currentQuestionIndex--
