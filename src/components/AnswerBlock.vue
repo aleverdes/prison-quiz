@@ -3,13 +3,13 @@
   <div class="answers-container">
 
     <div class="answers">
-      <answer-element :question-id="questionId" answer-id="answer1" :class="{ selected: selectedAnswerId === 'answer1' }"
+      <answer-element :question-id="questionId" answer-id="answer1" :selected-answer-id="selectedAnswerId"
                       :on-select="chooseAnswer"
                       text="Это было отвратительно, не хочу вспоминать"/>
-      <answer-element :question-id="questionId" answer-id="answer2" :class="{ selected: selectedAnswerId === 'answer2' }"
+      <answer-element :question-id="questionId" answer-id="answer2" :selected-answer-id="selectedAnswerId"
                       :on-select="chooseAnswer"
                       text="Да так, небольшая кража"/>
-      <answer-element :question-id="questionId" answer-id="answer3" :class="{ selected: selectedAnswerId === 'answer3' }"
+      <answer-element :question-id="questionId" answer-id="answer3" :selected-answer-id="selectedAnswerId"
                       :on-select="chooseAnswer"
                       text="Я уже и не помню"/>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <label :for="getAnswerId">
+  <label :for="getAnswerId" :class="{ selected: selectedAnswerId === answerId }">
     <div
         class="ch-box white-box answers-block checkbox-answer choose-answer block-vertical-margin-mini">
       <div class="chk-area">
@@ -17,6 +17,7 @@ export default {
   props: {
     questionId: String,
     answerId: String,
+    selectedAnswerId: String,
     text: String,
     onSelect: Function
   },
