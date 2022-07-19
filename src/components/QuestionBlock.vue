@@ -6,14 +6,11 @@
     <div class="box">
       <progress-bar :number="questionId" />
     </div>
-    <div class="bx">
-      <div class="quiz-image author-print-wrapper">
-        <img src="https://quizterra.com/files/storage/2020/11/25/utvRbYh8LNBOuL69K4EkT8CENlMmaCkM.gif" alt=""
-             style="display: inline; max-width: 100vw;">
-      </div>
+    <div class="quiz-image">
+      <img src="https://quizterra.com/files/storage/2020/11/25/utvRbYh8LNBOuL69K4EkT8CENlMmaCkM.gif">
     </div>
   </div>
-  <answer-block question-id="question1" />
+  <answer-block :question-id="getQuestionId" />
 
 </template>
 
@@ -71,16 +68,21 @@ a {
   padding-bottom: 40px;
 }
 
+#question-title {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .quiz-image {
   text-align: center;
   margin-top: 30px;
-}
-
-.author-print-wrapper {
-  position: relative;
-  max-width: max-content;
   margin-left: auto;
   margin-right: auto;
+}
+
+.quiz-image img {
+  display: inline;
+  max-width: 100vw;
 }
 
 </style>

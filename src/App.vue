@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <question-block :question-id="currentQuestionIndex" :data="questions" :localize="localize"/>
-  </div>
+  <question-block :question-id="currentQuestionIndex" :data="questions" :localize="localize"/>
 </template>
 
 <script>
@@ -41,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #app {
