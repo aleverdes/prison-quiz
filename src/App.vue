@@ -1,16 +1,31 @@
 <template>
   <div id="app">
-    <question-block question-text="Welcome to Your Vue.js App"/>
+    <question-block :question-id="currentQuestionIndex" :data="questions" :localize="localize"/>
   </div>
 </template>
 
 <script>
+import questions from './data/questions.json'
+import localization from './data/localization.json'
 import QuestionBlock from './components/QuestionBlock.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      currentQuestionIndex: 0,
+      questions: questions,
+      localization: localization,
+      currentLang: "ru"
+    }
+  },
   components: {
     QuestionBlock
+  },
+  methods: {
+    localize(id) {
+      return this.localization[id][this.currentLang];
+    }
   }
 }
 </script>

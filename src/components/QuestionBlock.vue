@@ -1,10 +1,10 @@
 <template>
   <div class="white-box padding-bottom">
     <div class="box tt">
-      <h1 id="question-title">{{ questionText }}</h1>
+      <h1 id="question-title">{{ getQuestionText }}</h1>
     </div>
     <div class="box">
-      <progress-bar number="2"/>
+      <progress-bar :number="questionId" />
     </div>
     <div class="bx">
       <div class="quiz-image author-print-wrapper">
@@ -25,7 +25,17 @@ export default {
   name: 'QuestionBlock',
   components: {AnswerBlock, ProgressBar},
   props: {
-    questionText: String
+    questionId: Number,
+    data: Object,
+    localize: Function
+  },
+  computed: {
+    getQuestionId() {
+      return `q${this.questionId + 1}`
+    },
+    getQuestionText() {
+      return this.localize(this.data.questions[this.questionId].text)
+    }
   }
 }
 </script>
