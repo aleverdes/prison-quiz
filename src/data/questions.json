@@ -2,6 +2,7 @@
   "questions" : [
     {
       "text" : "q1",
+      "image" : "./gif/1.gif",
       "answers" : [
         {
           "text" : "q1_a1",
@@ -19,6 +20,7 @@
     },
     {
       "text" : "q2",
+      "image" : "./gif/2.gif",
       "answers" : [
         {
           "text" : "q2_a1",
@@ -30,6 +32,150 @@
         },
         {
           "text" : "q2_a3",
+          "score" : -1
+        }
+      ]
+    },
+    {
+      "text" : "q3",
+      "image" : "./gif/3.gif",
+      "answers" : [
+        {
+          "text" : "q3_a1",
+          "score" : 2
+        },
+        {
+          "text" : "q3_a2",
+          "score" : 1
+        },
+        {
+          "text" : "q3_a3",
+          "score" : 0
+        }
+      ]
+    },
+    {
+      "text" : "q4",
+      "image" : "./gif/4.gif",
+      "answers" : [
+        {
+          "text" : "q4_a1",
+          "score" : 0
+        },
+        {
+          "text" : "q4_a2",
+          "score" : -2
+        },
+        {
+          "text" : "q4_a3",
+          "score" : -1
+        }
+      ]
+    },
+    {
+      "text" : "q5",
+      "image" : "./gif/5.gif",
+      "answers" : [
+        {
+          "text" : "q5_a1",
+          "score" : -2
+        },
+        {
+          "text" : "q5_a2",
+          "score" : 1
+        },
+        {
+          "text" : "q5_a3",
+          "score" : -2
+        }
+      ]
+    },
+    {
+      "text" : "q6",
+      "image" : "./gif/6.gif",
+      "answers" : [
+        {
+          "text" : "q6_a1",
+          "score" : 1
+        },
+        {
+          "text" : "q6_a2",
+          "score" : 0
+        },
+        {
+          "text" : "q6_a3",
+          "score" : -1
+        }
+      ]
+    },
+    {
+      "text" : "q7",
+      "image" : "./gif/7.gif",
+      "answers" : [
+        {
+          "text" : "q7_a1",
+          "score" : 1
+        },
+        {
+          "text" : "q7_a2",
+          "score" : -1
+        },
+        {
+          "text" : "q7_a3",
+          "score" : 0
+        }
+      ]
+    },
+    {
+      "text" : "q8",
+      "image" : "./gif/8.gif",
+      "answers" : [
+        {
+          "text" : "q8_a1",
+          "score" : -2
+        },
+        {
+          "text" : "q8_a2",
+          "score" : 1
+        },
+        {
+          "text" : "q8_a3",
+          "score" : -1
+        }
+      ]
+    },
+    {
+      "text" : "q9",
+      "image" : "./gif/9.gif",
+      "answers" : [
+        {
+          "text" : "q9_a1",
+          "score" : -1
+        },
+        {
+          "text" : "q9_a2",
+          "score" : 0
+        },
+        {
+          "text" : "q9_a3",
+          "score" : 1
+        }
+      ]
+    },
+    {
+      "text" : "q10",
+      "image" : "./gif/10.gif",
+      "answers" : [
+        {
+          "text" : "q8_a1",
+          "score" : 0
+        },
+        {
+          "text" : "q8_a2",
+          "score" : 1
+        },
+        {
+          "text" : "q8_a3",
           "score" : -1
         }
       ]

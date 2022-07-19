@@ -1,18 +1,11 @@
 <template>
   <div class="quiz-progress-bar">
     <div class="dots">
-      <div class="dot act"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+      <template v-for="item in getProgress()" :key="item.index">
+        <div class="dot" :class="{ act: item.value }"></div>
+      </template>
     </div>
-    <div class="count">1 / 10</div>
+    <div class="count">{{ number + 1 }} / {{ maxNumber }}</div>
   </div>
 </template>
 
@@ -20,7 +13,30 @@
 export default {
   name: "ProgressBar",
   props: {
-    number: Number
+    number: Number,
+    maxNumber: Number,
+  },
+  methods: {
+    test() {
+      return [
+        { id: 0, value: true },
+        { id: 1, value: true },
+        { id: 2, value: true },
+        { id: 3, value: false },
+        { id: 4, value: false },
+        { id: 5, value: false },
+      ]
+    },
+    getProgress() {
+      let array = new Array(this.maxNumber)
+      for (let i = 0; i < this.maxNumber; i++) {
+        array[i] = {
+          index: i,
+          value: i <= this.number
+        }
+      }
+      return array
+    }
   }
 }
 </script>

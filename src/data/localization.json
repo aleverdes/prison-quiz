@@ -1,34 +1,162 @@
 {
   "q1": {
-    "en": "",
+    "en": "To begin with, let's decide - why were you imprisoned?",
     "ru": "Для начала определимся — за что тебя посадили?"
   },
   "q1_a1": {
-    "en": "",
+    "en": "It was disgusting, I don't want to remember",
     "ru": "Это было отвратительно, не хочу вспоминать"
   },
   "q1_a2": {
-    "en": "",
+    "en": "Yes, a little theft.",
     "ru": "Да так, небольшая кража"
   },
   "q1_a3": {
-    "en": "",
+    "en": "I don't remember anymore",
     "ru": "Я уже и не помню"
   },
   "q2": {
-    "en": "",
+    "en": "What are your plans for the future - what will you do when you are free?",
     "ru": "Какие у тебя планы на будущее — что будешь делать, когда освободишься?"
   },
   "q2_a1": {
-    "en": "",
+    "en": "I'll go to jail again, I'm fine here",
     "ru": "Снова пойду в тюрьму, мне тут нормально"
   },
   "q2_a2": {
-    "en": "",
+    "en": "Will I get out of jail?! Funny. I'll sit here forever",
     "ru": "Я выйду из тюрьмы?! Смешно. Мне тут вечно сидеть"
   },
   "q2_a3": {
-    "en": "",
+    "en": "I will forget everything like a bad dream",
     "ru": "Забуду все как страшный сон"
+  },
+  "q3": {
+    "en": "Well, now you're in the cell. What do you say?",
+    "ru": "Ну вот ты уже заходишь в камеру. Что ты скажешь?"
+  },
+  "q3_a1": {
+    "en": "Hello, bros",
+    "ru": "Здорово, братва"
+  },
+  "q3_a2": {
+    "en": "Hello, guys",
+    "ru": "Здорово, мужики"
+  },
+  "q3_a3": {
+    "en": "Good evening",
+    "ru": "Добрый вечер"
+  },
+  "q4": {
+    "en": "Now someone you don't know is reaching out to you. Your actions?",
+    "ru": "Ладно, поздоровались. Теперь кто-то незнакомый протягивает тебе руку. Твои действия?"
+  },
+  "q4_a1": {
+    "en": "I will shake his hand",
+    "ru": "Пожму ему руку"
+  },
+  "q4_a2": {
+    "en": "I'll pass by",
+    "ru": "Пройду мимо"
+  },
+  "q4_a3": {
+    "en": "I'll ask who he is",
+    "ru": "Спрошу, кто он такой"
+  },
+  "q5": {
+    "en": "Can you cooperate with the prison administration?",
+    "ru": "Ты можешь сотрудничать с администрацией тюрьмы?"
+  },
+  "q5_a1": {
+    "en": "Yes, I need normal living conditions",
+    "ru": "Да, мне нужны нормальные условия жизнь"
+  },
+  "q5_a2": {
+    "en": "No, otherwise I can't survive",
+    "ru": "Нет, иначе мне не выжить"
+  },
+  "q5_a3": {
+    "en": "Yes, to make it worse for others",
+    "ru": "Да, чтобы другим было хуже"
+  },
+  "q6": {
+    "en": "Assess your impact on other people:",
+    "ru": "Оцени свое влияние на других людей:"
+  },
+  "q6_a1": {
+    "en": "Strongly",
+    "ru": "Сильно"
+  },
+  "q6_a2": {
+    "en": "Medium",
+    "ru": "Средне"
+  },
+  "q6_a3": {
+    "en": "Weak",
+    "ru": "Слабо"
+  },
+  "q7": {
+    "en": "Imagine that you have cigarettes. Some strange type comes up to you and asks for a treat. What will you do?",
+    "ru": "Представь, что у тебя появились сигареты. К тебе подходит какой-то странный тип и просит угостить. Что будешь делать?"
+  },
+  "q7_a1": {
+    "en": "Share, I don't mind",
+    "ru": "Поделюсь, мне не жалко"
+  },
+  "q7_a2": {
+    "en": "To me?! I will send him and drive him away",
+    "ru": "Ко мне?! Пошлю его и прогоню"
+  },
+  "q7_a3": {
+    "en": "Just refuse",
+    "ru": "Просто откажу"
+  },
+  "q8": {
+    "en": "You find yourself in an overcrowded cell where the prisoners sleep in turns. You are offered to buy a seat. Do you agree?",
+    "ru": "Ты попадаешь в переполненную камеру, заключенные там спят по очереди. Тебе предлагают купить место. Согласишься?"
+  },
+  "q8_a1": {
+    "en": "Yes, I buy",
+    "ru": "Да, покупаю"
+  },
+  "q8_a2": {
+    "en": "No thanks, I won't.",
+    "ru": "Нет, спасибо, откажусь"
+  },
+  "q8_a3": {
+    "en": "I will think",
+    "ru": "Я подумаю"
+  },
+  "q9": {
+    "en": "You suddenly notice that food has disappeared from your package. What to do?",
+    "ru": "Ты вдруг замечаешь, что из твоей передачки пропали продукты. Что делать?"
+  },
+  "q9_a1": {
+    "en": "Okay, I'll pretend everything's fine.",
+    "ru": "Ладно, сделаю вид, что все нормально"
+  },
+  "q9_a2": {
+    "en": "I'll ask to show things for a search.",
+    "ru": "Потребую предъявить вещи для шмона"
+  },
+  "q9_a3": {
+    "en": "I'll tell you about the loss",
+    "ru": "Скажу о пропаже, даже если буду жлобом"
+  },
+  "q10": {
+    "en": "You are invited to play cards. What will you play?",
+    "ru": "Тебе предлагают сыграть в карты. На что будешь играть?"
+  },
+  "q10_a1": {
+    "en": "For money or cigarettes",
+    "ru": "На деньги или сигареты"
+  },
+  "q10_a2": {
+    "en": "I refuse, I still lose",
+    "ru": "Откажусь, все равно проиграю"
+  },
+  "q10_a3": {
+    "en": "I'll just play",
+    "ru": "Сыграю просто так"
   }
 }

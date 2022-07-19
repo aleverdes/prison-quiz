@@ -4,10 +4,10 @@
       <h1 id="question-title">{{ getQuestionText }}</h1>
     </div>
     <div class="box">
-      <progress-bar :number="questionId"/>
+      <progress-bar :number="questionId" :max-number="getQuestionCount" />
     </div>
     <div class="quiz-image">
-      <img src="https://quizterra.com/files/storage/2020/11/25/utvRbYh8LNBOuL69K4EkT8CENlMmaCkM.gif">
+      <img :src="getQuestionImageUrl">
     </div>
   </div>
   <answer-block :question-id="getQuestionId" :answers="getAnswers" :localize="localize" :choose-answer="chooseAnswer"/>
@@ -32,11 +32,17 @@ export default {
     getQuestionId() {
       return `q${this.questionId + 1}`
     },
+    getQuestionCount() {
+      return this.questions.questions.length
+    },
     getQuestionText() {
       return this.localize(this.questions.questions[this.questionId].text)
     },
+    getQuestionImageUrl() {
+      return this.questions.questions[this.questionId].image
+    },
     getAnswers() {
-      return this.questions.questions[this.questionId].answers;
+      return this.questions.questions[this.questionId].answers
     }
   }
 }
