@@ -23,6 +23,12 @@ export default {
   methods: {
     localize(id) {
       return this.localization[id][this.currentLang];
+    },
+    nextQuestion() {
+      this.currentQuestionIndex++
+    },
+    prevQuestion() {
+      this.currentQuestionIndex--
     }
   }
 }

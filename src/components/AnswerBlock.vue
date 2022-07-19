@@ -30,6 +30,10 @@ export default {
   methods: {
     chooseAnswer(answerId) {
       this.selectedAnswerId = answerId
+
+      setTimeout(() => {
+
+      }, 300);
     }
   }
 }
