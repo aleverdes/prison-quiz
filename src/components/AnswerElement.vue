@@ -1,9 +1,8 @@
 <template>
   <label :for="getAnswerId">
     <div
-        class="ch-box white-box answers-block checkbox-answer choose-answer block-vertical-margin-mini"
-        :class="isSelected ? 'answer-sel' : 'answer-unsel'">
-      <div class="chk-area" :class="isSelected ? 'chk-checked' : 'chk-unchecked'">
+        class="ch-box white-box answers-block checkbox-answer choose-answer block-vertical-margin-mini">
+      <div class="chk-area">
         <span></span>
       </div>
       <input type="radio" :id="getAnswerId" :name="questionId" :value="answerId" style="display: none" @click="onAnswerClick">
@@ -19,8 +18,7 @@ export default {
     questionId: String,
     answerId: String,
     text: String,
-    onSelect: Function,
-    isSelected: Boolean
+    onSelect: Function
   },
   computed: {
     getAnswerId() {
@@ -43,9 +41,6 @@ export default {
 }
 
 .choose-answer {
-}
-
-.answer-unsel {
   background-color: #ffffff;
   color: #000000;
   height: 100%;
@@ -100,16 +95,11 @@ export default {
   max-width: 80%;
 }
 
-.choose-answer.answer-sel {
-  background: #d6e6ff !important;
+.selected .choose-answer {
+  background: #d6e6ff;
 }
 
-.choose-answer.answer-sel .chk-area.chk-checked {
-  background-color: #0f65ef !important;
-  border-color: #0f65ef !important;
-}
-
-.chk-checked {
+.selected .choose-answer .chk-area {
   border: 2px solid #0f65ef;
   background: #0f65ef url("/ch.png") 50% 50% no-repeat;
 }

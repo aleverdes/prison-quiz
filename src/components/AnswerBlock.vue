@@ -3,9 +3,15 @@
   <div class="answers-container">
 
     <div class="answers">
-      <answer-element :question-id="questionId" answer-id="answer1" :is-selected="selectedAnswerId == 'answer1'" :on-select="chooseAnswer" text="Это было отвратительно, не хочу вспоминать"/>
-      <answer-element :question-id="questionId" answer-id="answer2" :is-selected="selectedAnswerId == 'answer2'" :on-select="chooseAnswer" text="Да так, небольшая кража"/>
-      <answer-element :question-id="questionId" answer-id="answer3" :is-selected="selectedAnswerId == 'answer3'" :on-select="chooseAnswer" text="Я уже и не помню"/>
+      <answer-element :question-id="questionId" answer-id="answer1" :class="{ selected: selectedAnswerId === 'answer1' }"
+                      :on-select="chooseAnswer"
+                      text="Это было отвратительно, не хочу вспоминать"/>
+      <answer-element :question-id="questionId" answer-id="answer2" :class="{ selected: selectedAnswerId === 'answer2' }"
+                      :on-select="chooseAnswer"
+                      text="Да так, небольшая кража"/>
+      <answer-element :question-id="questionId" answer-id="answer3" :class="{ selected: selectedAnswerId === 'answer3' }"
+                      :on-select="chooseAnswer"
+                      text="Я уже и не помню"/>
     </div>
 
   </div>
@@ -23,7 +29,7 @@ export default {
     }
   },
   props: {
-    questionId: String
+    questionId: String,
   },
   methods: {
     chooseAnswer(answerId) {
