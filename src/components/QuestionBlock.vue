@@ -10,7 +10,7 @@
       <img src="https://quizterra.com/files/storage/2020/11/25/utvRbYh8LNBOuL69K4EkT8CENlMmaCkM.gif">
     </div>
   </div>
-  <answer-block :question-id="getQuestionId" />
+  <answer-block :question-id="getQuestionId" :answers="getAnswers" :localize="localize"/>
 
 </template>
 
@@ -32,6 +32,9 @@ export default {
     },
     getQuestionText() {
       return this.localize(this.data.questions[this.questionId].text)
+    },
+    getAnswers() {
+      return this.data.questions[this.questionId].answers;
     }
   }
 }

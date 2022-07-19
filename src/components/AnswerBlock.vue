@@ -1,19 +1,13 @@
 <template>
-
   <div class="answers-container">
-
     <div class="answers">
-      <answer-element :question-id="questionId" answer-id="answer1" :selected-answer-id="selectedAnswerId"
+      <answer-element v-for="answer in answers" :key="answer.text"
+                      :question-id="questionId"
+                      :answer-id="answer.text"
+                      :selected-answer-id="selectedAnswerId"
                       :on-select="chooseAnswer"
-                      text="Это было отвратительно, не хочу вспоминать"/>
-      <answer-element :question-id="questionId" answer-id="answer2" :selected-answer-id="selectedAnswerId"
-                      :on-select="chooseAnswer"
-                      text="Да так, небольшая кража"/>
-      <answer-element :question-id="questionId" answer-id="answer3" :selected-answer-id="selectedAnswerId"
-                      :on-select="chooseAnswer"
-                      text="Я уже и не помню"/>
+                      :text="localize(answer.text)" />
     </div>
-
   </div>
 </template>
 
@@ -30,6 +24,8 @@ export default {
   },
   props: {
     questionId: String,
+    answers: Object,
+    localize: Function
   },
   methods: {
     chooseAnswer(answerId) {
