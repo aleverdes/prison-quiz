@@ -1,0 +1,38 @@
+{
+  "questions" : [
+    {
+      "text" : "q1",
+      "answers" : [
+        {
+          "text" : "q1_a1",
+          "score" : -1
+        },
+        {
+          "text" : "q1_a2",
+          "score" : 1
+        },
+        {
+          "text" : "q1_a3",
+          "score" : 0
+        }
+      ]
+    },
+    {
+      "text" : "q2",
+      "answers" : [
+        {
+          "text" : "q2_a1",
+          "score" : 1
+        },
+        {
+          "text" : "q2_a2",
+          "score" : 0
+        },
+        {
+          "text" : "q2_a3",
+          "score" : -1
+        }
+      ]
+    }
+  ]
+}

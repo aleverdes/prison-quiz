@@ -1,7 +1,7 @@
 <template>
   <div class="white-box padding-bottom">
     <div class="box tt">
-      <h1 id="question-title">{{ msg }}</h1>
+      <h1 id="question-title">{{ questionText }}</h1>
     </div>
     <div class="box">
       <progress-bar number="2"/>
@@ -13,28 +13,19 @@
       </div>
     </div>
   </div>
-
-  <div class="answers-container">
-
-    <div class="answers">
-      <answer-block question-id="question1" answer-id="answer1" text="Это было отвратительно, не хочу вспоминать"/>
-      <answer-block question-id="question1" answer-id="answer2" text="Да так, небольшая кража"/>
-      <answer-block question-id="question1" answer-id="answer3" text="Я уже и не помню"/>
-    </div>
-
-  </div>
+  <answer-block question-id="question1" />
 
 </template>
 
 <script>
-import AnswerBlock from "@/components/AnswerBlock";
 import ProgressBar from "@/components/ProgressBar";
+import AnswerBlock from "@/components/AnswerBlock";
 
 export default {
   name: 'QuestionBlock',
-  components: {ProgressBar, AnswerBlock},
+  components: {AnswerBlock, ProgressBar},
   props: {
-    msg: String
+    questionText: String
   }
 }
 </script>
@@ -64,13 +55,6 @@ a {
 
 .tt {
   border-bottom: 1px solid #e8e8e8;
-}
-
-.white-box {
-  border-radius: 3px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 5%);
-  margin-bottom: 20px;
 }
 
 .padding-bottom {

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <QuestionBlock msg="Welcome to Your Vue.js App"/>
+    <question-block question-text="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -32,5 +32,12 @@ body {
 #app {
   width: 100%;
   max-width: 75vh;
+}
+
+.white-box {
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 5%);
+  margin-bottom: 20px;
 }
 </style>
