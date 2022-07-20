@@ -14,6 +14,13 @@
                 console.log('Yandex SDK initialized');
                 window.ysdk = ysdk;
                 ysdk.adv.showFullscreenAdv();
+
+                ysdk.getPlayer({ scopes: false }).then(player => {
+                    console.log("player initialized")
+                    window.player = player;
+                }).catch(err => {
+                    console.log("player error")
+                });
             });
     </script>
     <style>

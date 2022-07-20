@@ -7,7 +7,7 @@
       <progress-bar :number="questionId" :max-number="getQuestionCount" />
     </div>
     <div class="quiz-image">
-      <img :src="getQuestionImageUrl">
+      <img :src="getQuestionImageUrl" alt="">
     </div>
   </div>
   <answer-block :question-id="getQuestionId" :answers="getAnswers" :localize="localize" :choose-answer="chooseAnswer"/>
@@ -74,10 +74,6 @@ a {
   border-bottom: 1px solid #e8e8e8;
 }
 
-.padding-bottom {
-  padding-bottom: 40px;
-}
-
 #question-title {
   max-width: 100vw;
   overflow: hidden;
@@ -100,6 +96,7 @@ a {
 .quiz-image img {
   display: inline;
   max-width: 100vw;
+  width: 30%;
 }
 
 </style>

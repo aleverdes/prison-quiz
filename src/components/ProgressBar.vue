@@ -17,16 +17,6 @@ export default {
     maxNumber: Number,
   },
   methods: {
-    test() {
-      return [
-        { id: 0, value: true },
-        { id: 1, value: true },
-        { id: 2, value: true },
-        { id: 3, value: false },
-        { id: 4, value: false },
-        { id: 5, value: false },
-      ]
-    },
     getProgress() {
       let array = new Array(this.maxNumber)
       for (let i = 0; i < this.maxNumber; i++) {

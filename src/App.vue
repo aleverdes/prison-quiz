@@ -35,6 +35,7 @@ export default {
   name: 'App',
   data() {
     return {
+      loader: true,
       startScreen: true,
       preResultScreen: false,
       resultScreen: false,
@@ -43,7 +44,7 @@ export default {
       score: 0,
       questions: questions,
       localization: localization,
-      currentLang: "ru"
+      currentLang: window.ysdk.environment.i18n.lang
     }
   },
   components: {
@@ -68,6 +69,8 @@ export default {
         this.preResultScreen = true
         this.calculateScore()
       }
+
+      this.saveProgress()
     },
     prevQuestion() {
       this.currentQuestionIndex--
@@ -77,22 +80,40 @@ export default {
       this.resultScreen = false
       this.preResultScreen = false
       this.currentQuestionIndex = 0
+      this.saveProgress()
     },
     goToResultScreen() {
       this.startScreen = false
       this.preResultScreen = false
       this.resultScreen = true
       this.currentQuestionIndex = 0
+      this.saveProgress()
     },
     calculateScore() {
       let score = 0;
-      this.selectedAnswers.forEach(function (item, i, array) {
-        console.log(item, i, array)
-        console.log(item + " = " + answersScore[item])
+      this.selectedAnswers.forEach(function (item) {
         score += answersScore[item]
       })
       this.score = score
+    },
+    saveProgress() {
+      window.player.setData({
+        currentQuestionIndex: this.currentQuestionIndex,
+        selectedAnswers: this.selectedAnswers,
+        startScreen: this.startScreen,
+        resultScreen: this.resultScreen,
+        preResultScreen: this.preResultScreen
+      })
     }
+  },
+  created() {
+    window.player.getData().then(data => {
+      this.currentQuestionIndex = data.currentQuestionIndex ?? 0
+      this.selectedAnswers = data.selectedAnswers ?? []
+      this.startScreen = data.startScreen ?? true
+      this.resultScreen = data.resultScreen ?? false
+      this.preResultScreen = data.preResultScreen ?? false
+    })
   }
 }
 </script>
