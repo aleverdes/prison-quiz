@@ -1,4 +1,48 @@
 {
+  "startScreenTitle": {
+    "en": "Prison: Can you survive?",
+    "ru": "Тюряга: Кто ты по масти?"
+  },
+  "startScreenButton": {
+    "en": "Start",
+    "ru": "Начать"
+  },
+  "preResultButton": {
+    "en": "Results",
+    "ru": "Узнать результаты"
+  },
+  "resultScreenTitle0": {
+    "en": "The Rooster",
+    "ru": "Опущенный"
+  },
+  "resultScreenDesc0": {
+    "en": "Life in the zone is not easy for you, to put it mildly. You turned your back on your brother. And, of course, you will be punished for it. You can’t touch the lowered ones, you can’t take anything from them, even conversations are forbidden - only bullying and humiliation. In general, your chances of surviving in prison are close to zero.",
+    "ru": "На зоне тебе живется, мягко говоря, непросто. Ты отвернулся от братвы. И, конечно, будешь за это наказан. К опущенным нельзя прикасаться, нельзя у них ничего брать, даже разговоры запрещены - только издевательства и унижения. В общем, твои шансы выжить в тюрьме стремятся к нулю."
+  },
+  "resultScreenTitle1": {
+    "en": "The Man",
+    "ru": "Мужик"
+  },
+  "resultScreenDesc1": {
+    "en": "Not a bad result! Of course, you will not live in luxury, but at least they will leave you alone. Men are the largest group of prisoners. They ended up in prison because of a small crime and want to get out of there as soon as possible. They do not take part in showdowns, do not interfere in other people's affairs, but do not serve authorities.",
+    "ru": "Неплохой результат! В роскоши ты, конечно, жить не будешь, но тебя хотя бы оставят в покое. Мужики - самая многочисленная группа заключенных. Они попали в тюрьму из-за небольшого преступления и хотят скорее оттуда вырваться. Они не принимают участие в разборках, не вмешиваются в чужие дела, но и не прислуживают авторитетам."
+  },
+  "resultScreenTitle2": {
+    "en": "The Criminal",
+    "ru": "Пахан"
+  },
+  "resultScreenDesc2": {
+    "en": "Godfather - the leader of the thieves, a recognized authority. He and his entourage have special privileges - they may not work and leave for themselves everything they see fit from the common fund. Of course, such power is not given just like that. Godfathers are usually imprisoned for committing serious crimes, so the rest of the prisoners are afraid of them. You are lucky, in prison you will live luxuriously, and in general you feel at home there!",
+    "ru": "Пахан - лидер блатных, признанный авторитет. У него и его приближенных есть особые привилегии - они могут не работать и оставляют себе из общака все, что посчитают нужным. Конечно, такая власть не дается просто так. Паханы обычно сидят за совершение серьезных преступлений, поэтому их боятся остальные заключенные. Тебе повезло, в тюрьмы ты будешь жить роскошно, да и вообще чувствуешь себя там, как дома! "
+  },
+  "resultScreenButton": {
+    "en": "Try again",
+    "ru": "Начать заново"
+  },
+  "share": {
+    "en": "What result will your friends get? Share this quiz with them!",
+    "ru": "Какой результат получат твои друзья? Поделись с ними этим тестом!"
+  },
   "q1": {
     "en": "To begin with, let's decide - why were you imprisoned?",
     "ru": "Для начала определимся — за что тебя посадили?"

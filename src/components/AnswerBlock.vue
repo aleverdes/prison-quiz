@@ -1,12 +1,12 @@
 <template>
   <div class="answers-container">
     <div class="answers">
-      <answer-element v-for="answer in answers" :key="answer.text"
+      <answer-element v-for="answer in answers" :key="answer"
                       :question-id="questionId"
-                      :answer-id="answer.text"
+                      :answer-id="answer"
                       :selected-answer-id="selectedAnswerId"
                       :on-select="selectAnswer"
-                      :text="localize(answer.text)" />
+                      :text="localize(answer)" />
     </div>
   </div>
 </template>

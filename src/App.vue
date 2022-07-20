@@ -1,9 +1,16 @@
 <template>
   <template v-if="startScreen">
-    <start-screen :start-game="startGame"/>
+    <start-screen :start-game="startGame"
+                  :localize="localize"/>
+  </template>
+  <template v-else-if="preResultScreen">
+    <pre-result-screen :go-to-result-screen="goToResultScreen"
+                       :localize="localize"/>
   </template>
   <template v-else-if="resultScreen">
-    <result-screen :start-game="startGame"/>
+    <result-screen :start-game="startGame"
+                   :score="score"
+                   :localize="localize"/>
   </template>
   <template v-else>
     <question-block :question-id="currentQuestionIndex"
@@ -16,20 +23,24 @@
 </template>
 
 <script>
+import answersScore from './data/score.json'
 import questions from './data/questions.json'
 import localization from './data/localization.json'
 import QuestionBlock from './components/QuestionBlock.vue'
 import StartScreen from "@/components/StartScreen";
 import ResultScreen from "@/components/ResultScreen";
+import PreResultScreen from "@/components/PreResultScreen";
 
 export default {
   name: 'App',
   data() {
     return {
       startScreen: true,
+      preResultScreen: false,
       resultScreen: false,
       currentQuestionIndex: 0,
       selectedAnswers: [],
+      score: 0,
       questions: questions,
       localization: localization,
       currentLang: "ru"
@@ -38,7 +49,8 @@ export default {
   components: {
     ResultScreen,
     StartScreen,
-    QuestionBlock
+    QuestionBlock,
+    PreResultScreen
   },
   methods: {
     localize(id) {
@@ -47,8 +59,14 @@ export default {
     chooseAnswer(answerId) {
       this.selectedAnswers.push(answerId)
       this.currentQuestionIndex++
+
+      if (this.currentQuestionIndex === 4 || this.currentQuestionIndex === 8) {
+        window.ysdk.adv.showFullscreenAdv()
+      }
+
       if (this.currentQuestionIndex === questions.questions.length) {
-        this.resultScreen = true
+        this.preResultScreen = true
+        this.calculateScore()
       }
     },
     prevQuestion() {
@@ -56,7 +74,24 @@ export default {
     },
     startGame() {
       this.startScreen = false
+      this.resultScreen = false
+      this.preResultScreen = false
       this.currentQuestionIndex = 0
+    },
+    goToResultScreen() {
+      this.startScreen = false
+      this.preResultScreen = false
+      this.resultScreen = true
+      this.currentQuestionIndex = 0
+    },
+    calculateScore() {
+      let score = 0;
+      this.selectedAnswers.forEach(function (item, i, array) {
+        console.log(item, i, array)
+        console.log(item + " = " + answersScore[item])
+        score += answersScore[item]
+      })
+      this.score = score
     }
   }
 }

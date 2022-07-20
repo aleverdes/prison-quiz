@@ -1,13 +1,14 @@
 <template>
-  <h1>Тюряга: Кто ты по масти?</h1>
-  <button @click="startGame">Начать</button>
+  <h1>{{ localize("startScreenTitle") }}</h1>
+  <button @click="startGame">{{ localize("startScreenButton") }}</button>
 </template>
 
 <script>
 export default {
   name: "StartScreen",
   props: {
-    startGame: Function
+    startGame: Function,
+    localize: Function
   }
 }
 </script>
@@ -23,7 +24,7 @@ export default {
     background-color: #0f65ef;
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 24pt;
+    font-size: 18pt;
     text-transform: uppercase;
     left: 50%;
     position: relative;
