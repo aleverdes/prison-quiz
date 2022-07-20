@@ -1,7 +1,7 @@
 <template>
-  <div class="white-box padding-bottom">
+  <div class="white-box">
     <div class="box tt">
-      <h1 id="question-title">{{ getQuestionText }}</h1>
+      <h2 id="question-title">{{ getQuestionText }}</h2>
     </div>
     <div class="box">
       <progress-bar :number="questionId" :max-number="getQuestionCount" />
@@ -25,8 +25,7 @@ export default {
     questions: Object,
     localize: Function,
     chooseAnswer: Function,
-    prevQuestion: Function,
-    score: Number
+    prevQuestion: Function
   },
   computed: {
     getQuestionId() {
@@ -89,6 +88,13 @@ a {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 30px;
+}
+
+@media (max-width : 770px) {
+  .quiz-image {
+    display: none;
+  }
 }
 
 .quiz-image img {
